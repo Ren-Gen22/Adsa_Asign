@@ -34,12 +34,13 @@ s = "\033[1m"
 e = "\033[0;0m"    
 
 while True:
+    
+    print("\nChoose any sorting algorithm to implement:")
+    print("1.Bubble Sort\n2.Selection Sort\n3.Insertion Sort")
+    i=int(input())
     print("Enter the list in a single line:")
     l=list(map(int,input().split()))
     n=len(l)
-    print("Choose any sorting algorithm to implement:")
-    print("1.Bubble Sort\n2.Selection Sort\n3.Insertion Sort")
-    i=int(input())
     match i:
         case 1:
             Bubble(n,l)
