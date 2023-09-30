@@ -10,10 +10,22 @@ def Bubble(n,l):
     disp(l,"O(n^2)","O(n^2)","O(n)")
 
 def Select(n,l):
-
+    for i in range(n):
+        mini = i
+        for j in range(i+1, n):
+            if l[j] < l[mini]:
+                mini = j
+        l[i], l[mini] = l[mini], l[i]
     disp(l,"O(n^2)","O(n^2)","O(n^2)")
 
 def Insertion(n,l):
+    for i in range(1,n):
+        k = l[i]
+        j = i - 1
+        while j >= 0 and k < l[j]:
+            l[j + 1] = l[j]
+            j -= 1
+        l[j + 1] = k
     disp(l,"O(n^2)","O(n^2)","O(n)")
 
 
